@@ -1,0 +1,47 @@
+/* Profile Section */
+
+/* style DELETE POST FEATURE HERE */
+
+.DeletePost {
+    float: right;
+    padding-right: 33rem;
+    padding-top: 2rem
+}
+
+.userprofile {
+    padding: 5rem 0;
+    }
+    
+    .userprofile::after {
+    content: "";
+    display: block;
+    clear: both;
+    }
+    
+    .userprofile-image {
+    float: left;
+    width: calc(15% - 1rem);
+    display: flex; 
+    justify-content: right;
+    align-items: right;
+    }
+    
+
+    .img {
+    border-radius: 50%;
+    border: 10px solid;
+    }
+    
+    .userprofile-user-settings {
+    margin-top: 1.1rem;
+    }
+    
+    .userprofile-user-name {
+    display: inline-block;
+    font-size: 3.2rem;
+    font-weight: 300;
+    text-align: left;
+    margin-top: auto;
+    padding-top: 5rem;
+    padding-left: 1rem;
+    }
