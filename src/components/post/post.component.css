@@ -1,4 +1,10 @@
 .postComponent {
     border: 1px solid;
-    height: 75vh
+    height: 75vh;
+    background-color:aqua;
+    margin: 5rem;
+}
+
+.postImage {
+    width: 100%;
 }
