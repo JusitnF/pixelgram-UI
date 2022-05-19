@@ -7,5 +7,5 @@ export class Post{
    img!: string; // URL
    description!: string;
    createdOn!: Date;
-   comments!: PageOfItems<Comment>;
+   comments!: Comment[];
 }
