@@ -1,5 +1,5 @@
 export class PageOfItems<T>{
-   items: T[];
-   hasNext: boolean;
-   totalElements: number;
+   items!: T[];
+   hasNext!: boolean;
+   totalElements!: number;
 }
