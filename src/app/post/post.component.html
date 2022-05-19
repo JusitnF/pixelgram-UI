@@ -1,3 +1,7 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
 <style>
     /* Profile Section */
   
@@ -54,6 +58,7 @@
           height: 605px;
           display: block;
           margin: auto;
+          margin-bottom: 15px;
       }
       .post-container {
         height: 828px;
@@ -77,12 +82,91 @@
       .description-container{
         width: 600px;
         height: 154px;
-        background-color: teal;
+        background-color: rgb(255, 255, 255);
         margin: auto;
   
       }
-  
- 
+      .likes-comments{
+        width: 600px;
+        height: 20px;
+        background-color: antiquewhite;
+        margin-top: 15px;
+      }
+      .heart{
+
+        background-color: white;
+        margin-left: 18px;
+        margin-top: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgba(38, 38, 38, 1)
+      }
+      .likeCount{
+        width: 50px;
+        height: 18px;
+        background-color: white;
+        margin-left: 4.2px;
+        margin-top: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgba(171, 171, 171, 1)
+
+      }
+      .commentCount{
+        width: 90px;
+        height: 18px;
+        margin-left: 8px;
+        margin-top: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgba(171, 171, 171, 1)
+
+      }
+
+      .userTitle{
+        height: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 17.5px;
+        color: rgba(38, 38, 38, 1);
+      }
+      .firstLineText{
+        height: 18px;
+        width: 546px;
+        margin-left: 8px;
+
+        position: relative;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 1)
+      }
+
+      .moreDescription{
+        width: 34px;
+        height: 18px;
+        margin-left: 4px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgba(171, 171, 171, 1)
+
+      }
+
+      .viewMoreComments{
+        width: 142px;
+        height: 18px;
+        margin-left: 18px;
+        margin-top: 6px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgba(171, 171, 171, 1)
+      }
+      .textContainer{
+        margin-left: 18px;
+        margin-bottom: 6px;
+        margin-top: 13px;
+        margin-right: 40px;
+        
+      }
   
   </style>
   <!--<div class="post-container">-->
@@ -101,10 +185,19 @@
   <!--  </div>-->
   
     <img src="https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" alt="" class="post-img">
-      <div class="description-container">
-  
-        <p><span class="description">Tanner</span> Views</p>
+    <div class="description-container">    
+      <span class="heart"><i class="ri-heart-3-line ri-xl"></i></span>
+      <span class="likeCount">12 likes</span>
+      <span class="commentCount">14 comments</span>
+    <div class="textContainer">
+        <p><span class="userTitle">Tanner</span>
+          <span class="firstLineText">This is the first line of text  This is the first line of text  This is the first line of text  This is the first line of text</span>
+          <span class="moreDescription">more</span><br>
+        </p>
+        </div>
+          <span class="viewMoreComments">View more comments</span>
       </div>
+      
   
   
   
