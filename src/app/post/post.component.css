@@ -145,6 +145,11 @@
     left: 75%;
     bottom: 25%;
     }
+
+    .deletePost:hover{
+      background-color: rgba(13, 13, 13, 0.164);
+      cursor: pointer;
+    }
     .hover-container{
       width: 102;
       height: 47px;
