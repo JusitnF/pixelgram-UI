@@ -11,7 +11,7 @@ export class FeedComponent implements OnInit {
     posts!: PostComponent[];
 
     ngOnInit(): void {
-        this.loadFivePostCompents;
+        this.loadFivePostCompents();
     }
 
     loadFivePostCompents() {
@@ -19,6 +19,6 @@ export class FeedComponent implements OnInit {
     }
 
     onNextClick() {
-        this.loadFivePostCompents;
+        this.loadFivePostCompents();
     }
 }

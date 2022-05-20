@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
 import { UserComponent } from './user/user.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FeedComponent } from './feed/feed.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
  imports: [
@@ -13,7 +16,10 @@ import { UserComponent } from './user/user.component';
   declarations: [
     AppComponent,
     PostComponent,
-    UserComponent
+    UserComponent,
+    NavBarComponent,
+    FeedComponent,
+    LandingPageComponent
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
