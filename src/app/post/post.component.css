@@ -1,47 +1,137 @@
-/* Profile Section */
+  /* Profile Section */
+  /* style DELETE POST FEATURE HERE */
 
-/* style DELETE POST FEATURE HERE */
-
-.DeletePost {
-    float: right;
-    padding-right: 33rem;
-    padding-top: 2rem
+    .post-img {
+        width: 600px;
+        height: 605px;
+        display: block;
+        margin: auto;
+    }
+    .post-container {
+      height: 828px;
+      width: 616px;
+      display: block;
+      margin:auto;
+      box-sizing:border-box;
+      border-radius: 1px solid grey;
+    }
+    .UserProfileContainer {
+        height: 60px;
+        width: 600px;
+    }
+* {
+  margin: 0;
+  padding: 0;
 }
-
-.userprofile {
-    padding: 5rem 0;
+    .description-container{
+      width: 600px;
+      height: 154px;
+      background-color: rgb(255, 255, 255);
+      margin: auto;
     }
-
-    .userprofile::after {
-    content: "";
-    display: block;
-    clear: both;
+    .likes-comments{
+      width: 600px;
+      height: 20px;
+      background-color: antiquewhite;
+      margin-top: 15px;
     }
-
-    .userprofile-image {
-    float: left;
-    width: calc(15% - 1rem);
-    display: flex;
-    justify-content: right;
-    align-items: right;
+    .heart{
+      background-color: white;
+      margin-left: 18px;
+      margin-top: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgba(38, 38, 38, 1);
+      position: relative;
+      top: 10px;
     }
-
-
-    .img {
-    border-radius: 50%;
-    border: 10px solid;
+    .likeCount{
+      width: 50px;
+      height: 18px;
+      background-color: white;
+      margin-left: 4.2px;
+      margin-top: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgba(171, 171, 171, 1);
+      position: relative;
+      top: 7px;
     }
-
-    .userprofile-user-settings {
-    margin-top: 1.1rem;
+    .commentCount{
+      width: 90px;
+      height: 18px;
+      margin-left: 8px;
+      margin-top: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgba(171, 171, 171, 1);
+      position: relative;
+      top: 7px;
     }
-
-    .userprofile-user-name {
-    display: inline-block;
-    font-size: 3.2rem;
-    font-weight: 300;
-    text-align: left;
-    margin-top: auto;
-    padding-top: 5rem;
-    padding-left: 1rem;
+    .userTitle{
+      height: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 17.5px;
+      color: rgba(38, 38, 38, 1);
     }
+    .firstLineText{
+      height: 18px;
+      width: 546px;
+      margin-left: 8px;
+      position: relative;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 1)
+    }
+    .moreDescription{
+      width: 34px;
+      height: 18px;
+      margin-left: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: rgba(171, 171, 171, 1)
+    }
+    .viewMoreComments{
+      width: 142px;
+      height: 18px;
+      margin-left: 18px;
+      margin-top: 6px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgba(171, 171, 171, 1);
+      text-decoration: none;
+    }
+    .textContainer{
+      margin-left: 18px;
+      margin-bottom: 6px;
+      margin-top: 13px;
+      margin-right: 40px;
+    }
+    .user-container{
+        width: 600px;
+        height: 60px;
+        position: relative;
+        display: block;
+        margin: auto;
+        background-color: brown;
+
+    }
+    .profileImg{
+        width: 40px;
+        height: 40px;
+        margin-left: 11px;
+        margin-top: 14px;
+        position: relative;
+    }
+    .username{
+
+    }
+    
+    .deletePost{
+    width: 32px;
+    height: 26px;
+    background-color: rgba(143,143,143,0.19);
+    text-align: center;
+    ;
+    }
+    
