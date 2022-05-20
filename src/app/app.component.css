@@ -1,8 +1,4 @@
-.navbar {
-    width: 1440px;
-    height: 75px;
-    color: black;
-    top: 0;
-    left:0;
-    right:0;
+
+body {
+    background-color: #FAFAFA;
 }
