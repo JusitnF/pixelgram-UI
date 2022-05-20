@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
-import { UserComponent } from './user/user.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
@@ -14,10 +13,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   declarations: [
     AppComponent,
     PostComponent,
-    UserComponent,
     NavBarComponent
   ],
   providers: [HttpClientModule],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, PostComponent, NavBarComponent]
 })
 export class AppModule { }

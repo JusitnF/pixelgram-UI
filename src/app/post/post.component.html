@@ -2,6 +2,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <title>Posts</title>
 </head>
+<<<<<<< HEAD
     <div class="post-container">
       <div class="user-container">
         <img class="profileImg" src="https://avatars.githubusercontent.com/u/82592?s=200&v=4?w=200&h=200&fit=crop&crop=faces" alt="" >
@@ -9,14 +10,24 @@
         <button class="deletePost" type="button">...</button>
       </div>
       <img src="https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" alt="" class="post-img">
+=======
+
+    <div class="post-container" *ngFor="let post of postData.items">
+      <div class="user-container">
+        <img class="profileImg" src="https://avatars.githubusercontent.com/u/82592?s=200&v=4?w=200&h=200&fit=crop&crop=faces" alt="" >
+        <a class="username">Tanner {{post.post.id}}</a>
+        <button class="deletePost" type="button">...</button>
+      </div>
+      <img src={{post.post.img}} alt="" class="post-img">
+>>>>>>> 2fdba3e81871144fbb14769d7caaf3eecf75d1a2
       <div class="description-container">    
         <span class="heart"><em class="ri-heart-3-line ri-xl"></em></span>
         <span class="likeCount">12 likes</span>
         <span class="commentCount">14 comments</span>
       <div class="textContainer">
-          <p><span class="userTitle">Tanner</span>
-            <span class="firstLineText">This is the first line of text  This is the first line of text  This is the first line of text  This is the first line of text</span>
-            <span class="moreDescription">more</span><br>
+          <p><span class="userTitle">Tanner {{post.post.id}}</span>
+            <span class="firstLineText">{{post.post.description}}</span>
+            <span class="moreDescription" *ngIf="post.post.description.length > 10">more</span><br>
           </p>
           </div>
             <span class="viewMoreComments"><a href="#" class="viewMoreComments">View more comments</a></span>
