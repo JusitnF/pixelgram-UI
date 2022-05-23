@@ -30,7 +30,6 @@ export class PostComponent implements OnInit {
       this.postData = data;
       console.log(this.postData.items);
     });
-    
   }
-
+  
 }

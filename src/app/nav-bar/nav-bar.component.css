@@ -10,7 +10,9 @@ body {
   height: 4.7rem;
   background-color: #ffffff;
   top: 0;
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.09);;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.09);
+  position: sticky;
+  z-index: 100;
 }
 
 .searchBar {
@@ -54,7 +56,15 @@ body {
 }
 .userImg {
 position: absolute;
-
+}
+#userIcon{
+  position: relative;
+  width: 25px;
+  height: 28px;
+  left: 80%;
+  right: 17%;
+  top: 31%;
+  bottom: 31%;
 }
 .login {
 height: 50px;
@@ -67,3 +77,4 @@ background-color: #ffffff;
 border: 1px solid #E6E6E6;
 border-radius: 3px;
 }
+
