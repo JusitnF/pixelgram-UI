@@ -17,6 +17,9 @@ export class FeedComponent implements OnInit {
 
     pageNumber: number = 0;
     pageSize: number = 5;
+    distance: number = 1;
+    throttle: number = 50;
+
 
     ngOnInit(): void {
         this.loadFivePostCompents();
@@ -28,8 +31,11 @@ export class FeedComponent implements OnInit {
             console.log(this.postData.items);
         });
     }
-
-    onNextClick() {
-        this.loadFivePostCompents();
-    }
+   
+   onScrollDown() {
+    this.postServiceService.fetchListOfPosts(this.pageNumber, this.pageSize++).subscribe(data =>
+        {this.postData = data;
+    });
+    console.log("scrolled down")
+   }
 }

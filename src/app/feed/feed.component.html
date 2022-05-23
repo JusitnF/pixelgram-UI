@@ -1,3 +1,14 @@
+
+
+<div
+    class= "search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="distance" 
+    [infiniteScrollThrottle]="throttle"
+    (scrolled)="onScrollDown()"
+    (scrolledUp)="onScrollUp">
+</div>
+
 <div class="container full-width">
   <ul class="list">
     <li *ngFor="let post of postData.items">
