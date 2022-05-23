@@ -18,7 +18,7 @@ export class FeedComponent implements OnInit {
     pageNumber: number = 0;
     pageSize: number = 5;
     distance: number = 1;
-    throttle: number = 50;
+    throttle: number = 5;
 
 
     ngOnInit(): void {
