@@ -1,5 +1,5 @@
 import { ThisReceiver } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { PageOfItems } from 'src/models/page-of-item';
 import { PostUI } from 'src/models/PostUI';
 import { User } from 'src/models/user';
@@ -13,7 +13,16 @@ import { PostServiceService } from 'src/services/post-service/post-service.servi
 export class PostComponent implements OnInit {
 
   User = new User();
-  postData = new PageOfItems<PostUI>();
+  @Input()
+  postData: PostUI = new PostUI();
+  //   post: {id: 5,
+  //     user: new User(),
+  //     img: "banana",
+  //     description: "banana",
+  //     createdOn: new Date(),
+  //     comments: []}, 
+  //     comments: new PageOfItems()
+  //   };
 
   constructor(private postServiceService: PostServiceService) { 
   
@@ -22,14 +31,14 @@ export class PostComponent implements OnInit {
     pageSize: number = 5;
   
   ngOnInit(): void {
-    this.getPost();
+    //this.getPost();
   }
 
-  public getPost() {
-    this.postServiceService.fetchListOfPosts(this.pageNumber, this.pageSize).subscribe(data => {
-      this.postData = data;
-      console.log(this.postData.items);
-    });
-  }
+  // public getPost() {
+  //   this.postServiceService.fetchListOfPosts(this.pageNumber, this.pageSize).subscribe(data => {
+  //     this.postData = data;
+  //     console.log(this.postData.items);
+  //   });
+  // }
   
 }

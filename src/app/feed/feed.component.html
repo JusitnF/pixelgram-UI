@@ -1,0 +1,17 @@
+<div class="container full-width">
+  <ul class="list">
+    <li *ngFor="let post of postData.items">
+      <app-post [postData]="post"><!-- Displays the post --></app-post>
+    </li>
+  </ul>
+
+  <!-- This is where the scrolling should be implemented
+  <button
+    id="next"
+    *ngIf="count() > 5"
+    class="button centered"
+    (click)="onNextClick()"
+  >
+    Next
+  </button> -->
+</div>
