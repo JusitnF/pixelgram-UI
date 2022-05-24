@@ -15,14 +15,6 @@ export class PostComponent implements OnInit {
   User = new User();
   @Input()
   postData: PostUI = new PostUI();
-  //   post: {id: 5,
-  //     user: new User(),
-  //     img: "banana",
-  //     description: "banana",
-  //     createdOn: new Date(),
-  //     comments: []}, 
-  //     comments: new PageOfItems()
-  //   };
 
   constructor(private postServiceService: PostServiceService) { 
   
@@ -31,14 +23,6 @@ export class PostComponent implements OnInit {
     pageSize: number = 5;
   
   ngOnInit(): void {
-    //this.getPost();
+   
   }
-
-  // public getPost() {
-  //   this.postServiceService.fetchListOfPosts(this.pageNumber, this.pageSize).subscribe(data => {
-  //     this.postData = data;
-  //     console.log(this.postData.items);
-  //   });
-  // }
-  
 }
