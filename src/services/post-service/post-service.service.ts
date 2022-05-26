@@ -12,14 +12,14 @@ import { Comment } from 'src/models/comment';
 })
 
 export class PostServiceService {
-  private baseURL = "http://34.72.139.183/posts"
+  private baseURL = "http://34.72.139.183/"
 
   constructor(private http: HttpClient) { }
 
   fetchListOfPosts(pageNumber: number, pageSize: number):Observable<PageOfItems<PostUI>> {
-    return this.http.get<PageOfItems<PostUI>>(`${this.baseURL}?pNum=${pageNumber}&pSize=${pageSize}`);
+    return this.http.get<PageOfItems<PostUI>>(`${this.baseURL}posts?pNum=${pageNumber}&pSize=${pageSize}`);
   }
 
   getComments(postId: number, pageNumber: number, pageSize: number):Observable<PageOfItems<Comment>> {
-    return this.http.get<PageOfItems<Comment>>(`${this.baseURL}/comments?pId=${postId}&pNum=${pageNumber}&pSize=${pageSize}`)
+    return this.http.get<PageOfItems<Comment>>(`${this.baseURL}comments?pId=${postId}&pNum=${pageNumber}&pSize=${pageSize}`)
   }}

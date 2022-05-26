@@ -2,6 +2,6 @@
    <span *ngFor="let commentNumber of comments.items">
         <span class="comment-username">{{commentNumber.username}}</span>
         <span class="comment-body">{{commentNumber.body}}</span>
-        <span class="viewMoreComments" (click)="showMoreComments()"><a href="#" class="viewMoreComments">View more comments</a></span>
     </span>
+    <span class="viewMoreComments" (click)="showMoreComments()">View More Comments</span>
 </div>

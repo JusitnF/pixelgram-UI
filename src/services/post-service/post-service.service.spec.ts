@@ -63,7 +63,7 @@ describe('PostServiceService', () => {
       expect(result.totalElements).toBe(0)
     })
 
-    req = httpTestingController.expectOne(`http://34.72.139.183/posts/comments?pId=${postId}&pNum=${pageNumber}&pSize=${pageSize}`)
+    req = httpTestingController.expectOne(`http://34.72.139.183/comments?pId=${postId}&pNum=${pageNumber}&pSize=${pageSize}`)
     req.flush(commentPage)
   })
 });
