@@ -1,5 +1,4 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { EventManager } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-login-form',
@@ -30,6 +29,4 @@ export class LoginFormComponent implements OnInit {
   <p class="alert" [hidden]="!usernameError">*Username is required</p>        
 </div>
 */
-  }
 
-}
