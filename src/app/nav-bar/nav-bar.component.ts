@@ -20,10 +20,6 @@ export class NavBarComponent implements OnInit {
     window.location.href = url;
   }
 
-  refreshPage() {
-    window.location.reload();
-  }
-
   showLoginButton() {
     this.Login = !this.Login;
     this.isVisible = !this.isVisible;

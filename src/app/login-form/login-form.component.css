@@ -111,24 +111,6 @@ color: #e6e6e6;
     font-size: 15px;
 }
 
-.loginSubmit {
-    width: 118px;
-    height: 45px;
-    position: relative;
-    background: #5197E9;
-    border-radius: 3px;
-    border: none;
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0.025em;
-    top: 445px;
-    left:  450px;
-    bottom: 97px;
-    right:  48px;
-    cursor: pointer;
-}
-
 .registerSubmit {
     position: absolute;
     width: 70px;

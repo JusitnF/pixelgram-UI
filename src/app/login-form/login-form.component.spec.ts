@@ -22,4 +22,30 @@ describe('LoginFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return true for blank username', () => {
+    component.userControl.setValue("");
+    expect(component.usernameEmpty()).toBeTrue();
+
+    component.userControl.setValue("   ");
+    expect(component.usernameEmpty()).toBeTrue();
+  });
+
+  it('should return false for non-blank username', () => {
+    component.userControl.setValue("Not blank");
+    expect(component.usernameEmpty()).toBeFalse();
+  });
+
+  it('should return true for blank password', () => {
+    component.passControl.setValue("");
+    expect(component.passwordEmpty()).toBeTrue();
+
+    component.passControl.setValue("   ");
+    expect(component.passwordEmpty()).toBeTrue();
+  });
+
+  it('should return false for non-blank password', () => {
+    component.passControl.setValue("Not blank");
+    expect(component.passwordEmpty()).toBeFalse();
+  });
 });

@@ -12,14 +12,12 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { CommentComponent } from './comment/comment.component';
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginButtonComponent } from './login-button/login-button.component';
 
 const routes: Routes = [
-
   { path: '', component: LandingPageComponent },
-
   { path: 'login', component: LoginPageComponent }
-
 ];
 
 @NgModule({
@@ -28,7 +26,7 @@ const routes: Routes = [
     HttpClientModule,
     InfiniteScrollModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
@@ -40,7 +38,8 @@ const routes: Routes = [
     NavBarComponent,
     LoginPageComponent,
     LoginFormComponent,
-    CommentComponent
+    CommentComponent,
+    LoginButtonComponent
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
