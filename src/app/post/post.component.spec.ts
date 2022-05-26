@@ -1,4 +1,5 @@
 import { HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PageOfItems } from 'src/models/page-of-item';
 import { User } from 'src/models/user';
@@ -8,6 +9,7 @@ import { PostComponent } from './post.component';
 describe('PostComponent', () => {
   let component: PostComponent;
   let fixture: ComponentFixture<PostComponent>;
+  let httpTestingController: HttpTestingController;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -26,7 +28,7 @@ describe('PostComponent', () => {
         img: "banana",
         description: "banana",
         createdOn: new Date(),
-        comments: []}, 
+        comments: new PageOfItems<Comment>()},
         comments: new PageOfItems()
       };
     fixture.detectChanges();

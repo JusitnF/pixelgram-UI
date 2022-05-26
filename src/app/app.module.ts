@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -10,6 +10,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { LoginFormComponent } from './login-form/login-form.component';
+import { CommentComponent } from './comment/comment.component';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -38,9 +39,10 @@ const routes: Routes = [
     LandingPageComponent,
     NavBarComponent,
     LoginPageComponent,
-    LoginFormComponent
+    LoginFormComponent,
+    CommentComponent
   ],
-  providers: [HttpClientModule],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

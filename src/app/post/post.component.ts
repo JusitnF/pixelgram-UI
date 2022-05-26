@@ -4,6 +4,7 @@ import { PageOfItems } from 'src/models/page-of-item';
 import { PostUI } from 'src/models/PostUI';
 import { User } from 'src/models/user';
 import { PostServiceService } from 'src/services/post-service/post-service.service';
+import { Comment } from 'src/models/comment';
 
 @Component({
   selector: 'app-post',
@@ -15,14 +16,26 @@ export class PostComponent implements OnInit {
   User = new User();
   @Input()
   postData: PostUI = new PostUI();
+  @Input()
+  comments: PageOfItems<Comment> = new PageOfItems<Comment>();
+  
 
   constructor(private postServiceService: PostServiceService) { 
   
   }
     pageNumber: number = 0;
     pageSize: number = 5;
+    
+
   
   ngOnInit(): void {
    
   }
+    
 }
+
+  
+  
+
+
+

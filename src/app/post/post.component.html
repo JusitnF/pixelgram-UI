@@ -24,6 +24,8 @@
             <span class="moreDescription" *ngIf="postData.post.description.length > 50">more</span><br>
           </p>
           </div>
-            <span class="viewMoreComments"><a href="#" class="viewMoreComments">View more comments</a></span>
         </div>
+      <app-comment [comments] = "comments" [postId]="postData.post.id"></app-comment>
+
       </div>
+      

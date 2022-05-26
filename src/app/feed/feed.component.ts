@@ -10,8 +10,9 @@ import { PostUI } from 'src/models/PostUI';
 })
 export class FeedComponent implements OnInit {
 
-    posts!: PostUI[];
+    posts = new PostUI();
     postData = new PageOfItems<PostUI>();
+    comments = new PageOfItems<Comment>();
 
     constructor (private postServiceService: PostServiceService) {}
 
@@ -21,7 +22,7 @@ export class FeedComponent implements OnInit {
     distance: number = .1;
     @Input()
     throttle: number = 300;
-   
+    commentPage = 0;
 
 
     ngOnInit(): void {
