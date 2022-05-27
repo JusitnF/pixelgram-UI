@@ -6,29 +6,16 @@
   
   <header id="navbarTop">
     <div class="logos_container">
-        <img src="../../assets/images/PixelgramLogo.png" alt="" class="logoPic">
+        <button><img src="../../assets/images/PixelgramLogo.png" alt="" class="logoPic"></button>
         <div class="verticalBar"></div>
-        <img src="../../assets/images/Pixelgram.png" alt="" class="Pixelgram">
+        <button><img src="../../assets/images/Pixelgram.png" alt="" class="Pixelgram"></button>
     </div>
   
-    
-      <div class="searchIcon">
+      <div class="searchIcon" *ngIf="router.url === '/'">
         <input class="searchBar" type="text" placeholder="Search">
       </div>
-      <em class="ri-user-3-line ri-2x" id="userIcon"></em>
-    
-    <!-- <button type="button" class="login" (click)="goTo('#')">Login</button> -->
-  </header>
-  
+      
+      <em class="ri-user-3-line ri-2x" id="userIcon" (click)="showLoginButton()" *ngIf="router.url === '/'"></em>
+      <button type="button" class="login" *ngIf="isVisible && router.url === '/'" routerLink="/login" routerLinkActive="active">{{Login?"Login":"Login"}}</button>
 
-  <!-- This is a sample code for putting an icon within a search bar input box
-      This will be deleted when search bar is complete
-    
-    <div class="sb-example-1">
-    <div class="search">
-       <input type="text" class="searchTerm" placeholder="What are you looking for?">
-       <button type="submit" class="searchButton">
-         <i class="fa fa-search"></i>
-      </button>
-    </div>
- </div> -->
+  </header>

@@ -1,0 +1,18 @@
+<div class="form-container">
+    
+    <a href="#"><img src="../../assets/images/PixelgramLogo.png" alt="" class="logoPic"></a>
+    <div class="bar"></div>
+    <img src="../../assets/images/Login.png" alt="" class="login">
+    
+    <input type="text" class="username" id="userN" [formControl]="userControl" placeholder="Username">
+    <p class="requiredText" id="userText" *ngIf="userControl.touched && usernameEmpty()">Username required.</p>
+    
+    <input type="text" class="password" [formControl]="passControl" placeholder="Password">
+    <p class="requiredText" id="passText" *ngIf="passControl.touched && passwordEmpty()">Password required.</p>
+
+    <app-login-button></app-login-button>
+    <button class="registerSubmit" type="submit">Register</button>
+    
+    <p class="requiredText" id="incorrectText">* Username or Password incorrect</p>
+
+</div>

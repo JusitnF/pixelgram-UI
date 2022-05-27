@@ -7,18 +7,5 @@
     [infiniteScrollThrottle]="throttle"
     (scrolled)="onScrollDown()">
 
-
-
-      <app-post [postData]="post" *ngFor="let post of postData.items"><!-- Displays the post --></app-post>
-    
- 
-  <!-- This is where the scrolling should be implemented
-  <button
-    id="next"
-    *ngIf="count() > 5"
-    class="button centered"
-    (click)="onNextClick()"
-  >
-    Next
-  </button> -->
+    <app-post [postData]="post" *ngFor="let post of postData.items"></app-post>
 </div>

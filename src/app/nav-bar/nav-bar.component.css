@@ -37,6 +37,8 @@ body {
   background-color: #000000;
   position: absolute;
   left: 35%;
+  right: 78.71%;
+  top: 1%;
 }
 .logos_container {
   position: absolute;
@@ -67,14 +69,16 @@ position: absolute;
   bottom: 31%;
 }
 .login {
-height: 50px;
-width: 100px;
-position: absolute;
-box-sizing: border-box;
-top: 1rem;
-left: 85%;
-background-color: #ffffff;
-border: 1px solid #E6E6E6;
-border-radius: 3px;
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  left: 75.21%;
+  right: 17.71%;
+  top: 70%;
+  margin: 3px;
+  cursor: pointer;
 }
-
