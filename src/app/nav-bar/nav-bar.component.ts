@@ -11,6 +11,8 @@ export class NavBarComponent implements OnInit {
   @ViewChild('login')
   login!: ElementRef;
 
+  Login: boolean = true;
+  isVisible: boolean = false;
 
   constructor(public router: Router, private renderer: Renderer2) { 
     this.renderer.listen('window', 'click', (e:Event) => {
@@ -22,13 +24,9 @@ export class NavBarComponent implements OnInit {
   
   ngOnInit(): void {
   }
-
-  Login: boolean = true;
-  isVisible: boolean = false;
-
+  
   toggleLoginButton() {
     this.Login = !this.Login;
     this.isVisible = !this.isVisible;
   }
-  
 }

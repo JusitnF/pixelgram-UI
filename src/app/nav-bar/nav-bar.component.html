@@ -7,15 +7,15 @@
   <header id="navbarTop">
     
       <div class="logos_container">
-          <button routerLink="/"><img src="../../assets/images/PixelgramLogo.png" alt="" class="logoPic"></button>
+          <a routerLink="/"><img src="../../assets/images/PixelgramLogo.png" alt="" class="logoPic"></a>
           <div class="verticalBar"></div>
-          <button routerLink="/"><img src="../../assets/images/Pixelgram.png" alt="" class="Pixelgram"></button>
+          <a routerLink="/"><img src="../../assets/images/Pixelgram.png" alt="" class="Pixelgram"></a>
       </div>
   
       <div class="searchIcon" *ngIf="router.url === '/'">
         <input class="searchBar" type="text" placeholder="Search">
       </div>
       
-      <button><em class="ri-user-3-line ri-2x" id="userIcon" (click)="toggleLoginButton()" *ngIf="router.url === '/'" #login></em></button>
+      <em class="ri-user-3-line ri-2x" id="userIcon" (click)="toggleLoginButton()" *ngIf="router.url === '/'" #login></em>
       <button type="button" class="login" id= "login" *ngIf="isVisible && router.url ==='/'" routerLink="/login" routerLinkActive="active">{{Login?"Login":"Login"}}</button>
   </header> 
