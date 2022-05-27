@@ -23,15 +23,18 @@ export class CommentComponent implements OnInit {
   constructor(private postService: PostServiceService) { }
   
   ngOnInit(): void {
-    this.postService.getComments(this.postId, this.pageNumber, this.pageSize).subscribe((data: PageOfItems<Comment>) => {
-      this.comments = data;
-    })
+    this.postService.getComments(this.postId, this.pageNumber, this.pageSize).subscribe(data => {
+      this.comments = data;   
+    });
+
+    this.showMoreComments();
   }
+
   showMoreComments(){
-    this.postService.getComments(this.postId, this.pageNumber, this.pageSize += 5).subscribe((data) => {
+    this.postService.getComments(this.postId, this.pageNumber, this.pageSize += 5).subscribe(data => {
       this.comments = data;
       this.showComment = data.hasNext;   
-    })
+    });
 
   }
 }

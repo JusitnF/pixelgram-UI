@@ -3,18 +3,24 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { CommentComponent } from './comment.component';
 import { PostServiceService } from 'src/services/post-service/post-service.service';
 import { PageOfItems } from 'src/models/page-of-item';
+import { Observable, of } from 'rxjs';
+import { Comment } from 'src/models/comment';
 
 
 class MockPostService{
-  getComments(){}
+  getComments(): Observable<PageOfItems<Comment>>{
+    return of(new PageOfItems<Comment>())
+  } 
+
+ // getComments(){}
 }
 
-describe('CommentComponent', () => {
+fdescribe('CommentComponent', () => {
   let component: CommentComponent;
   let fixture: ComponentFixture<CommentComponent>;
   let service: PostServiceService;
   let commentPage: PageOfItems<Comment> = new PageOfItems<Comment>() 
-});
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ CommentComponent ],
@@ -27,25 +33,36 @@ describe('CommentComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CommentComponent);
     component = fixture.componentInstance;
-    service = TestBed.get(PostServiceService)
+   // service.getComments.prototype.returnValue(of(commentPage))
+    service = TestBed.inject(PostServiceService)
     fixture.detectChanges();
   });
-
+  const mockResponse: PageOfItems<Comment> ={
+    items: [],
+    hasNext: false,
+    totalElements: 1
+  };
 
 
   it('should create', () => {
+    
     expect(component).toBeTruthy();
+   
   });
 
  it('should call getComments on service when ngOnInit is called', () => {
-    spyOn(service, 'getComments');
+    console.log(service);
+    
+    let spy = spyOn(service, 'getComments').and.returnValue(of(mockResponse));
+    console.log(spy);
     component.ngOnInit();
     expect(service.getComments).toHaveBeenCalled();
    });
 
-   it('should call getComments on service when ngOnInit is called', () => {
+  /* it('should call getComments on service when ngOnInit is called', () => {
     spyOn(service, 'getComments');
     component.ngOnInit();
     expect(service.getComments)
-   })
+   })*/
 
+  })
