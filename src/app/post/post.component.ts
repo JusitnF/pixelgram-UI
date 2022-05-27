@@ -48,9 +48,12 @@ export class PostComponent implements OnInit {
   
 
   showMoreComments(){
-    this.postService.getComments(this.postData.post.id, this.pageNumber, this.pageSize).subscribe(data => {
+    this.postService.getComments(this.postData.post.id, this.pageNumber++, this.pageSize).subscribe(data => {
       this.commentPage = data;
-      this.showComment = data.hasNext;   
+      this.showComment = data.hasNext; 
+      if(this.commentPage.hasNext){
+        this.commentPage.items = [...this.commentPage.items, ...data.items]
+      }
     });
   
     

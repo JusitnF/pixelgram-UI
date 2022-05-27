@@ -18,17 +18,18 @@
   <div class="description-container">
     <span class="heart"><em class="ri-heart-3-line ri-xl"></em></span>
     <span class="likeCount">12 likes</span>
-    <span class="commentCount">14 comments</span>
+    <span class="commentCount">{{postData.comments.totalElements}} comments</span>
     <div class="textContainer">
       <p><span class="userTitle"><a href="#">Tanner</a> {{postData.post.id}}</span>
         <span class="firstLineText">{{postData.post.description}}</span>
         <span class="moreDescription" *ngIf="postData.post.description.length > 50">more</span><br>
       </p>
-      
-      <span *ngIf="showComment"  class="viewMoreComments" (click)="showMoreComments()">View More Comments</span>
-      <div class ="commentSection" *ngFor="let comment of commentPage.items">
+      <button *ngIf="postData.comments.totalElements > 5" class="viewMoreComments" (click)="showMoreComments()">{{showComment ? "View Less Comments": "View More Comments"}}</button>
+      <div *ngFor="let comment of commentPage.items">
         <app-comment [comment]="comment"></app-comment>
       </div>
+
+
     </div>
   </div>
 </div>
