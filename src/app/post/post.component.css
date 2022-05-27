@@ -117,14 +117,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 }
 .textContainer{
   margin: 13px 18px 6px 40px;
-<<<<<<< Updated upstream
- padding-bottom: 4px;
-
-
- 
-=======
-  
->>>>>>> Stashed changes
+  padding-bottom: 4px;
 }
 .user-container{
     width: 600px;
