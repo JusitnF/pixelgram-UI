@@ -12,7 +12,7 @@ import { Comment } from 'src/models/comment';
 })
 
 export class PostServiceService {
-  private baseURL = "http://34.72.139.183/"
+  private baseURL = "http://localhost:8080/"
 
   constructor(private http: HttpClient) { }
 

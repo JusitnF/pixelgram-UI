@@ -16,32 +16,43 @@ export class PostComponent implements OnInit {
   User = new User();
   @Input()
   postData: PostUI = new PostUI();
-  @Input()
-  comments: PageOfItems<Comment> = new PageOfItems<Comment>();
-  @Input() 
-  postId: number = 0;
   
-
   constructor(private postService: PostServiceService) { 
   
   }
-  
+  @Input()
+  commentPage: PageOfItems<Comment> = new PageOfItems<Comment>();
   pageNumber: number = 0;
   pageSize: number = 5;
   showComment = false;
+
+  increment(){
+    for(let comment of this.commentPage.items){
+      if(comment.id == this.postData.post.id){
+        this.postData.comments.totalElements++
+        console.log(this.postData.comments.totalElements)
+      }
+    }
+  }
+    
+  
     
 
   
   ngOnInit(): void {
-   this.showMoreComments();
+
+    
+  
   }
 
+  
+
   showMoreComments(){
-    this.postService.getComments(this.postId, this.pageNumber, this.pageSize += 5).subscribe(data => {
-      this.comments = data;
+    this.postService.getComments(this.postData.post.id, this.pageNumber, this.pageSize).subscribe(data => {
+      this.commentPage = data;
       this.showComment = data.hasNext;   
     });
-
+  
     
 }
 }
