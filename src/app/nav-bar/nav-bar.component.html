@@ -5,17 +5,17 @@
   </head>
   
   <header id="navbarTop">
-    <div class="logos_container">
-        <button><img src="../../assets/images/PixelgramLogo.png" alt="" class="logoPic"></button>
-        <div class="verticalBar"></div>
-        <button><img src="../../assets/images/Pixelgram.png" alt="" class="Pixelgram"></button>
-    </div>
+    
+      <div class="logos_container">
+          <button routerLink="/"><img src="../../assets/images/PixelgramLogo.png" alt="" class="logoPic"></button>
+          <div class="verticalBar"></div>
+          <button routerLink="/"><img src="../../assets/images/Pixelgram.png" alt="" class="Pixelgram"></button>
+      </div>
   
       <div class="searchIcon" *ngIf="router.url === '/'">
         <input class="searchBar" type="text" placeholder="Search">
       </div>
       
-      <em class="ri-user-3-line ri-2x" id="userIcon" (click)="showLoginButton()" *ngIf="router.url === '/'"></em>
-      <button type="button" class="login" *ngIf="isVisible && router.url === '/'" routerLink="/login" routerLinkActive="active">{{Login?"Login":"Login"}}</button>
-
-  </header>
+      <button><em class="ri-user-3-line ri-2x" id="userIcon" (click)="toggleLoginButton()" *ngIf="router.url === '/'" #login></em></button>
+      <button type="button" class="login" id= "login" *ngIf="isVisible && router.url ==='/'" routerLink="/login" routerLinkActive="active">{{Login?"Login":"Login"}}</button>
+  </header> 

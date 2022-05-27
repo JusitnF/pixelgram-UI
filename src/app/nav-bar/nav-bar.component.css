@@ -23,6 +23,7 @@ body {
   border: 1px solid #DBDBDB;
   text-align: center;
   top: 2rem;
+  background-color: #fafafa;
 }
 .logoPic {
   height: 29px;
@@ -60,7 +61,7 @@ body {
 position: absolute;
 }
 #userIcon{
-  position: relative;
+  position: absolute;
   width: 25px;
   height: 28px;
   left: 80%;

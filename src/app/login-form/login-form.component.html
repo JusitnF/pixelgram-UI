@@ -5,10 +5,10 @@
     <img src="../../assets/images/Login.png" alt="" class="login">
     
     <input type="text" class="username" id="userN" [formControl]="userControl" placeholder="Username">
-    <p class="requiredText" id="userText" *ngIf="userControl.touched && usernameEmpty()">Username required.</p>
+    <p class="requiredText" id="userText" *ngIf="userControl.touched && usernameEmpty()">* Username required.</p>
     
     <input type="text" class="password" [formControl]="passControl" placeholder="Password">
-    <p class="requiredText" id="passText" *ngIf="passControl.touched && passwordEmpty()">Password required.</p>
+    <p class="requiredText" id="passText" *ngIf="passControl.touched && passwordEmpty()">* Password required.</p>
 
     <app-login-button></app-login-button>
     <button class="registerSubmit" type="submit">Register</button>

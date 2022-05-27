@@ -35,4 +35,4 @@ export class LoginFormComponent implements OnInit {
       return true;
     }
   }
-
+}
