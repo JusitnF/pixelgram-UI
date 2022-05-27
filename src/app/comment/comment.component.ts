@@ -27,14 +27,8 @@ export class CommentComponent implements OnInit {
       this.comments = data;   
     });
 
-    this.showMoreComments();
   }
 
-  showMoreComments(){
-    this.postService.getComments(this.postId, this.pageNumber, this.pageSize += 5).subscribe(data => {
-      this.comments = data;
-      this.showComment = data.hasNext;   
-    });
-
-  }
+  
 }
+
