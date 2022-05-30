@@ -50,15 +50,6 @@ fdescribe('CommentComponent', () => {
    
   });
 
- it('should call getComments on service when ngOnInit is called', () => {
-    console.log(service);
-    
-    let spy = spyOn(service, 'getComments').and.returnValue(of(mockResponse));
-    console.log(spy);
-    component.ngOnInit();
-    expect(service.getComments).toHaveBeenCalled();
-   });
-
   /* it('should call getComments on service when ngOnInit is called', () => {
     spyOn(service, 'getComments');
     component.ngOnInit();
