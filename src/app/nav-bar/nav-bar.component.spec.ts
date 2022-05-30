@@ -34,7 +34,6 @@ describe('NavBarComponent', () => {
 
   it('should change isVisible to true when set to false and running showLoginButton', () => {
     component.isVisible = false;
-    component.toggleLoginButton();
-    expect(component.isVisible).toBeTrue();
+    expect(component.toggleLoginButton).toBeTrue();
   });
 });
