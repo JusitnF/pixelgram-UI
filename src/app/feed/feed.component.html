@@ -7,5 +7,5 @@
     [infiniteScrollThrottle]="throttle"
     (scrolled)="onScrollDown()">
 
-    <app-post [postData]="post" *ngFor="let post of postData.items"></app-post>
+    <app-post [postData]="post" [commentPage] = "post.comments" *ngFor="let post of postData.items"></app-post>
 </div>

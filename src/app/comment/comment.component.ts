@@ -15,7 +15,7 @@ export class CommentComponent implements OnInit {
   @Input()
   postId: number = 0;
   @Input ()
-  comments: PageOfItems<Comment> = new PageOfItems<Comment>();
+  comment:Comment = new Comment();
   pageNumber: number = 0;
   pageSize: number = 5;
   showComment = false; 
@@ -23,15 +23,9 @@ export class CommentComponent implements OnInit {
   constructor(private postService: PostServiceService) { }
   
   ngOnInit(): void {
-    this.postService.getComments(this.postId, this.pageNumber, this.pageSize).subscribe((data: PageOfItems<Comment>) => {
-      this.comments = data;
-    })
-  }
-  showMoreComments(){
-    this.postService.getComments(this.postId, this.pageNumber, this.pageSize += 5).subscribe((data) => {
-      this.comments = data;
-      this.showComment = data.hasNext;   
-    })
 
   }
+
+  
 }
+
