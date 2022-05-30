@@ -28,13 +28,13 @@ describe('NavBarComponent', () => {
 
   it('should not give error when running showLoginButton()', () => {
     expect(function () {
-      component.showLoginButton();
+      component.toggleLoginButton();
     }).not.toThrowError();
   });
 
   it('should change isVisible to true when set to false and running showLoginButton', () => {
     component.isVisible = false;
-    component.showLoginButton();
+    component.toggleLoginButton();
     expect(component.isVisible).toBeTrue();
   });
 });
