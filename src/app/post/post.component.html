@@ -7,7 +7,7 @@
   <div class="user-container">
     <img class="profileImg"
       src="https://avatars.githubusercontent.com/u/82592?s=200&v=4?w=200&h=200&fit=crop&crop=faces" alt="">
-    <a href="#" class="username">Tanner {{postData.post.id}}</a>
+    <a href="#" class="username"> {{postData.post.id}} </a>
 
     <div class="deletePost">...
       <button class="delete">Delete Post</button>
@@ -24,8 +24,9 @@
         <span class="firstLineText">{{postData.post.description}}</span>
         <span class="moreDescription" *ngIf="postData.post.description.length > 50">more</span><br>
       </p>
-      <button *ngIf="postData.comments.totalElements > 5" class="viewMoreComments" (click)="showMoreComments()">{{showComment ? "View Less Comments": "View More Comments"}}</button>
-      <div *ngFor="let comment of commentPage.items">
+      <button *ngIf="postData.comments.totalElements > 5" class="viewMoreComments"
+        (click)="showMoreComments()">{{showComment ? "View Less Comments": "View More Comments"}}</button>
+      <div  class="commentSection" *ngFor="let comment of commentPage.items">
         <app-comment [comment]="comment"></app-comment>
       </div>
 

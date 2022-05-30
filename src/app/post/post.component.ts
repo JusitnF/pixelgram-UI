@@ -25,30 +25,13 @@ export class PostComponent implements OnInit {
   pageNumber: number = 0;
   pageSize: number = 5;
   showComment = false;
-
-  increment(){
-    for(let comment of this.commentPage.items){
-      if(comment.id == this.postData.post.id){
-        this.postData.comments.totalElements++
-        console.log(this.postData.comments.totalElements)
-      }
-    }
-  }
     
-  
-    
-
-  
   ngOnInit(): void {
-
-    
-  
+ 
   }
-
   
-
   showMoreComments(){
-    this.postService.getComments(this.postData.post.id, this.pageNumber++, this.pageSize).subscribe(data => {
+    this.postService.getComments(this.postData.post.id, this.pageNumber, this.pageSize+=5).subscribe(data => {
       this.commentPage = data;
       this.showComment = data.hasNext; 
       if(this.commentPage.hasNext){
