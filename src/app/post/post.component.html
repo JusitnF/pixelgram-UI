@@ -3,27 +3,31 @@
   <title>Posts</title>
 </head>
 
-    <div class="post-container" *ngFor="let post of postData.items">
-      <div class="user-container">
-        <img class="profileImg" src="https://avatars.githubusercontent.com/u/82592?s=200&v=4?w=200&h=200&fit=crop&crop=faces" alt="" >
-        <a href="#" class="username">Tanner {{post.post.id}}</a>
-        <button class="deletePost" type="button">...</button>
-        
-        <button class="delete">Delete Post</button>
-        
+<div class="post-container">
+  <div class="user-container">
+    <img class="profileImg" alt="">
+    <a href="#" class="username">Tanner {{postData.post.id}}</a>
 
-      </div>
-      <img src={{post.post.img}} alt="" class="post-img">
-      <div class="description-container">    
-        <span class="heart"><em class="ri-heart-3-line ri-xl"></em></span>
-        <span class="likeCount">12 likes</span>
-        <span class="commentCount">14 comments</span>
+    <div class="deletePost">...
+       <button class="delete">Delete Post</button>
+    </div>
+
+  </div>
+  <img src={{postData.post.img}} alt="" class="post-img">
+  <div class="description-container">
+    <span class="heart"><em class="ri-heart-3-line ri-xl"></em></span>
+    <span class="likeCount">12 likes</span>
+    <span class="commentCount">{{postData.comments.totalElements}} comments</span>
       <div class="textContainer">
-          <p><span class="userTitle"><a href="#">Tanner</a> {{post.post.id}}</span>
-            <span class="firstLineText">{{post.post.description}}</span>
-            <span class="moreDescription" *ngIf="post.post.description.length > 50">more</span><br>
-          </p>
-          </div>
-            <span class="viewMoreComments"><a href="#" class="viewMoreComments">View more comments</a></span>
-        </div>
+        <p><span class="userTitle"><a href="#">Tanner </a> {{postData.post.id}}</span>
+        <span class="firstLineText">  {{postData.post.description}}</span>
+        <span class="moreDescription" *ngIf="postData.post.description.length > 50">more</span><br>
+      </p>
       </div>
+      <button *ngIf="postData.comments.totalElements > 5 && !commentButton" class="viewMoreComments"
+        (click)="showMoreComments()" >{{commentButton ? "View Less Comments" : "View More Comments"}}</button>
+      <div  class="commentSection" *ngFor="let comment of commentPage.items">
+        <app-comment [comment]="comment"></app-comment>
+      </div>
+  </div>
+</div>

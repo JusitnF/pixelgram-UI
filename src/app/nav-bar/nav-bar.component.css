@@ -18,11 +18,19 @@ body {
 .searchBar {
   box-sizing: border-box;
   border-radius: 3px;
-  left: 45%;
   position: absolute;
   border: 1px solid #DBDBDB;
   text-align: center;
-  top: 2rem;
+  left: 42.95%;
+  right: 42.44%;
+  top: 30.68%;
+  bottom: 31.83%;
+  width: 210px;
+  height: 28px;
+  background-color: #FAFAFA;
+}
+.searchBar::placeholder {
+  color: #999999;
 }
 .logoPic {
   height: 29px;
@@ -37,6 +45,8 @@ body {
   background-color: #000000;
   position: absolute;
   left: 35%;
+  right: 78.71%;
+  top: 1%;
 }
 .logos_container {
   position: absolute;
@@ -65,16 +75,19 @@ position: absolute;
   right: 17%;
   top: 31%;
   bottom: 31%;
+  cursor: pointer;
 }
 .login {
-height: 50px;
-width: 100px;
-position: absolute;
-box-sizing: border-box;
-top: 1rem;
-left: 85%;
-background-color: #ffffff;
-border: 1px solid #E6E6E6;
-border-radius: 3px;
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #E6E6E6;
+  border-radius: 3px;
+  left: 75.21%;
+  right: 17.71%;
+  top: 70%;
+  margin: 3px;
+  cursor: pointer;
 }
-

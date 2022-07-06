@@ -1,0 +1,11 @@
+
+
+<div
+    class= "search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="distance" 
+    [infiniteScrollThrottle]="throttle"
+    (scrolled)="onScrollDown()">
+
+    <app-post [postData]="post" [commentPage] = "post.comments" *ngFor="let post of postData.items"></app-post>
+</div>
